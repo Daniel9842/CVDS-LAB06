@@ -18,7 +18,7 @@ Se utiliza algunos conceptos aprendidos en las partes anteriores y posteriorment
 
 
 # PREGUNTAS PARTE 3:
-## Punto 20:
+## Punto 20: 
 ### Historial
 GET = Los parametros permanecen en el historial.
 ### Marcadores
