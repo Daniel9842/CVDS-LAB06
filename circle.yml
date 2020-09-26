@@ -6,4 +6,4 @@ deployment:
     staging:     
         branch: master     
         heroku: d93f3e36-8f83-4cff-88d0-aa58f60691f0       
-            appname: cvds-lab
+            appname: 
