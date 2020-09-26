@@ -9,13 +9,34 @@ import org.primefaces.PrimeFaces;
 @ManagedBean(name = "calculadoraBean")
 @ApplicationScoped
 public class primeFaces{
-	private float promedio;
-	private float desviaviacion;
+	public String datos;
+	private double promedio;
+	private float desviacion;
 	private float varianza;
 	private float moda;
+	private ArrayList<Double> nums;
 	public primeFaces(){
+		datos = "";
+		moda = 0;
+		desviacion= 0;
+		varianza =0;
+		promedio=0;
+		nums = new ArrayList<Double>();
 	}
-	public double calculateMean(ArrayList<Float> nums){
+	public void recibirLista(String numString){
+		datos = numString;
+		String parcial="";
+		contInicial = 0;
+		for(int i=0;i<datos.lentgh();i++){
+			if(datos.charAt(i)==';'){
+				parcial.substring(contInicial,i)
+				nums.add(Float.parseFloat(parcial));
+				contInicial = i+1;
+			}
+		}
+
+	}
+	public double calcularPromedio(){
 		float resultado=0;
 		for(int x=0;x<nums.size();x++){
 			resultado+=nums.get(x);
@@ -25,27 +46,27 @@ public class primeFaces{
 		return resultado;
 		
 	}
-	public double calculateStandardDeviation(ArrayList<Float> nums){
+	public double calcularDesviacion(){
 		float resultado=0;
 		calculateMean(nums);
 		for(int x=0;x<nums.size();x++){
-			resultado+=(num.get(x)-promedio)*(num.get(x)-promedio);
+			resultado+=(nums.get(x)-promedio)*(nums.get(x)-promedio);
 		}
-		resultado= Math.sqrt(resultado/num.size());
+		resultado= Math.sqrt(resultado/nums.size());
 		desviacion= resultado;
 		return resultado;
 	}
-	public double calculateVariance(ArrayList<Float> nums){
+	public double calcularVarianza(){
 		float resultado=0;
 		calculateMean(nums);
 		for(int x=0;x<nums.size();x++){
-			resultado+=(num.get(x)-promedio)*(num.get(x)-promedio);
+			resultado+=(nums.get(x)-promedio)*(nums.get(x)-promedio);
 		}
-		resultado= resultado/num.size();
+		resultado= resultado/nums.size();
 		varianza = resultado;
 		return resultado;
 	}
-	public double calculateMode(ArrayList<Float> nums){
+	public double calculatarModa(){
 		Arrays.sort(nums)
 		float modaC,numActual=nums.get(0),resultado;
 		int cont=0,contModa=0;
@@ -69,21 +90,48 @@ public class primeFaces{
 		return resultado;
 	}
 	public void restart(){
+		nums = new ArrayList<Double>();
 		promedio=0;
 		desviaviacion=0;
 		varianza=0;
 		moda=0;
 	}
-	public float getPromedio(){
+	public double getPromedio(){
 		return promedio;
 	}
 	public float getDesviacion(){
-		return desvianza;
+		return desviacion;
 	}
 	public float getVarianza(){
 		return varianza;
 	}
 	public float getModa(){
 		return moda;
+	}
+	public String getDatos(){
+		return datos;
+	}
+	public ArrayList<Float> getNums(){
+		return nums;
+	}
+	
+	
+	public void setPromedio(double newPromedio){
+		promedio = newPromedio;
+	}
+	public void setDesviacion(float newDesviacion){
+		desviacion = newDesviacion;
+	}
+	public void setVarianza(float newVarianza){
+		varianza = newVarianza;
+	}
+	public void setModa(float newModa){
+		moda = newModa;
+	}
+	public void setDatos(float newDatos){
+		datos = newDatos ;
+	}
+	public void setNums(String numString){
+		recibirLista(numString);
 	}
 }

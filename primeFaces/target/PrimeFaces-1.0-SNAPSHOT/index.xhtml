@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3c.org/1999/xhtml"
+
+ xmlns:h="http://xmlns.jcp.org/jsf/html"
+
+ xmlns:p="http://primefaces.org/ui"
+
+ xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head></h:head>
+<h:body>
+	<h:form id="calculadora_form">
+		<h1>Agregue los números a la calculadora</h1>
+		<p:outputLabel value="#{calculadoraBean.moda}" style="display: none;"></p:outputLabel> 
+		<p:inputText value="#{calculadoraBean.getDatos()}"/>
+		<p:outputLabel value="#{calculadoraBean.recibirLista()}" style="display: none;"></p:outputLabel>
+		<p:panelGrid columns="2">
+			<p:outputLabel id="media" value="media #{calculadoraBean.promedio}"></p:outputLabel>
+			<p:commandButton update="calculadora_form" actionListener="#{calculadoraBean.calcularPromedio}" value="media" />
+		</p:panelGrid>
+		
+	</h:form>	
+</h:body>
+</html>
