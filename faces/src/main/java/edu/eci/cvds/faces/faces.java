@@ -51,22 +51,27 @@ public class faces{
 		nums = newNums;
 	}
 	public void setDatos(String newDatos){
-		datos = newDatos;
+		this.datos = newDatos;
 	}
 
 	public ArrayList<Double> recibirLista(){
-		String parcial="";
-		int contInicial = 0;
-		for(int i=0;i<datos.length();i++){
-			if(datos.charAt(i)==';' || i==datos.length()-1){
-				parcial.substring(contInicial,i);
+		int cont = 0;
+		String parcial = "";
+		while (cont < datos.length()){
+			if(datos.charAt(cont) != ';') {
+				parcial +=  datos.charAt(cont);
+			}else {
+				if(cont == datos.length()-1) {
+					parcial +=  datos.charAt(cont);
+				}
 				nums.add(Double.parseDouble(parcial));
-				contInicial = i+1;
+				parcial = "";
 			}
-		}
+			cont+=1;
+        }
 		return nums;
-
 	}
+
 	
 	public double calculateMean(){
 		recibirLista();
@@ -76,7 +81,8 @@ public class faces{
 		}
 		resultado = resultado/nums.size();
 		this.mean = resultado;
-		return resultado;
+		resultado = 0;
+		return mean;
 	}
 	
 	public double calculateStandardDeviation(){
