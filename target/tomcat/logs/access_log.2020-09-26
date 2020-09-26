@@ -1,0 +1,15 @@
+0:0:0:0:0:0:0:1 - - [26/Sep/2020:18:07:21 -0500] "GET /faces/index.xhtml HTTP/1.1" 404 1059 http-bio-8080-exec-2 1563
+0:0:0:0:0:0:0:1 - - [26/Sep/2020:18:07:23 -0500] "GET /faces/index.xhtml HTTP/1.1" 404 1059 http-bio-8080-exec-3 11
+0:0:0:0:0:0:0:1 - - [26/Sep/2020:18:07:25 -0500] "GET /faces/index.xhtml HTTP/1.1" 404 1059 http-bio-8080-exec-5 5
+0:0:0:0:0:0:0:1 - - [26/Sep/2020:18:07:30 -0500] "GET /faces/index.xhtml HTTP/1.1" 404 1059 http-bio-8080-exec-6 4
+0:0:0:0:0:0:0:1 - - [26/Sep/2020:18:08:26 -0500] "GET /faces/index.xhtml HTTP/1.1" 404 1059 http-bio-8080-exec-1 2753
+0:0:0:0:0:0:0:1 - - [26/Sep/2020:18:08:41 -0500] "GET /index.xhtml HTTP/1.1" 404 1059 http-bio-8080-exec-3 8
+0:0:0:0:0:0:0:1 - - [26/Sep/2020:18:08:48 -0500] "GET /faces/index.xhtml HTTP/1.1" 404 1059 http-bio-8080-exec-5 5
+0:0:0:0:0:0:0:1 - - [26/Sep/2020:18:10:19 -0500] "GET /faces/index.xhtml HTTP/1.1" 404 1059 http-bio-8080-exec-1 1231
+0:0:0:0:0:0:0:1 - - [26/Sep/2020:18:11:46 -0500] "GET /faces/index.xhtml HTTP/1.1" 200 6019 http-bio-8080-exec-2 1440
+0:0:0:0:0:0:0:1 - - [26/Sep/2020:18:11:46 -0500] "GET /faces/css/estilos.css HTTP/1.1" 404 981 http-bio-8080-exec-3 41
+0:0:0:0:0:0:0:1 - - [26/Sep/2020:18:11:49 -0500] "POST /faces/index.xhtml HTTP/1.1" 200 4922 http-bio-8080-exec-4 66
+0:0:0:0:0:0:0:1 - - [26/Sep/2020:18:11:50 -0500] "POST /faces/index.xhtml HTTP/1.1" 200 4959 http-bio-8080-exec-5 19
+0:0:0:0:0:0:0:1 - - [26/Sep/2020:18:11:51 -0500] "POST /faces/index.xhtml HTTP/1.1" 200 4995 http-bio-8080-exec-6 29
+0:0:0:0:0:0:0:1 - - [26/Sep/2020:18:11:51 -0500] "POST /faces/index.xhtml HTTP/1.1" 200 5020 http-bio-8080-exec-7 18
+0:0:0:0:0:0:0:1 - - [26/Sep/2020:18:11:52 -0500] "POST /faces/index.xhtml HTTP/1.1" 200 4891 http-bio-8080-exec-8 13
