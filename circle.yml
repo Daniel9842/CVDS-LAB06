@@ -1,8 +1,9 @@
-machine:   
-    java:     
-        version: oraclejdk8  
+machine:
+  java:
+    version: oraclejdk8
 
-deployment:   
-    staging:     
-        branch: master     
-        heroku: d93f3e36-8f83-4cff-88d0-aa58f60691f0 
+deployment:
+  staging:
+    branch: master
+    heroku: 
+      appname: pdsw-circleci-demo
