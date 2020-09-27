@@ -11,28 +11,38 @@ and open the template in the editor.
 		xmlns:f="http://java.sun.com/jsf/core">
 
  <h:head>
-	<link rel ="stylesheet" href="css/estilos.css" />
  </h:head>
- <h:body>
-		<h:form id="calculadora_form">
-			<h1 class="contenedor1">Agregue los números a la calculadora</h1>   
-			<p:inputText id="output1" value="#{calculadoraBean.datos}" class="entrada"/>
+ <h:body style="background-image: url('/img/fondo.jpg');">
+		<h:form id="calculadora_form"><center>
+			<h1 style="font-family:Bahnschrift; color:white;">CALCULATOR 2077</h1>   
+			<p:inputText style="background-color: #45056F;font-family:Bahnschrift; color:white;" id="output1" value="#{calculadoraBean.datos}" class="entrada"/>
 			<p:outputLabel value="#{calculadoraBean.recibirLista()}" style="display: none;"></p:outputLabel> 
 			
-			<p:panelGrid columns="2" >
-				
-				<p:outputLabel id="moda" value="Media #{calculadoraBean.mean}" class ="media" ></p:outputLabel>
-				<p:outputLabel id="DesviacionEstandar" value="DesviacionEstandar #{calculadoraBean.standard}"></p:outputLabel>
-				<p:outputLabel id="Varianza" value="Varianza #{calculadoraBean.variance}"></p:outputLabel>
-				<p:outputLabel id="Moda" value="Moda #{calculadoraBean.mode}"></p:outputLabel>
-				<p:commandButton update="calculadora_form" actionListener="#{calculadoraBean.calculateMean}" value="Calcular Media" />
-				<p:commandButton update="calculadora_form" actionListener="#{calculadoraBean.calculateStandardDeviation}" value="Calcular Desviacion Estandar"/>
-				<p:commandButton update="calculadora_form" actionListener="#{calculadoraBean.calculateVariance}" value="Calcular Varianza"/>
-				<p:commandButton update="calculadora_form" actionListener="#{calculadoraBean.calculateMode}" value="Calcular Moda"/>
-				<p:commandButton update="calculadora_form" actionListener="#{calculadoraBean.restart}" value="Reiniciar"/>
-			</p:panelGrid>
 			
-
-		</h:form>
+			<p><center>
+				<p:commandButton style="font-family:Bahnschrift; color:white; background-color:#0D8BCA;" update="calculadora_form" actionListener="#{calculadoraBean.calculateMean}" value="Media" />
+				<p:commandButton style="font-family:Bahnschrift; color:white; background-color:#0D8BCA;" update="calculadora_form" actionListener="#{calculadoraBean.calculateStandardDeviation}" value="Desviacion Estandar"/>
+				<p:commandButton style="font-family:Bahnschrift; color:white; background-color:#0D8BCA;" update="calculadora_form" actionListener="#{calculadoraBean.calculateVariance}" value="Varianza"/>
+				<p:commandButton style="font-family:Bahnschrift; color:white; background-color:#0D8BCA;" update="calculadora_form" actionListener="#{calculadoraBean.calculateMode}" value="Moda"/>
+				<p:commandButton style="font-family:Bahnschrift; color:white; background-color:#0D8BCA;" update="calculadora_form" actionListener="#{calculadoraBean.restart}" value="Reiniciar"/>
+			</center></p>
+			
+			<p><center>
+				<p:outputLabel style="font-family:Bahnschrift; font-size:20px; color:white; background-color:#45056F;" id="moda" value="Media #{calculadoraBean.mean}" class ="media" ></p:outputLabel>
+			</center></p>
+	
+			<p><center>
+				<p:outputLabel style="font-family:Bahnschrift; font-size:20px; color:white; background-color:#45056F;" id="DesviacionEstandar" value="DesviacionEstandar #{calculadoraBean.standard}"></p:outputLabel>
+			</center></p>
+			
+			<p><center>
+				<p:outputLabel style="font-family:Bahnschrift; font-size:20px; color:white; background-color:#45056F;" id="Varianza" value="Varianza #{calculadoraBean.variance}"></p:outputLabel>
+			</center></p>
+			
+			<p><center>
+				<p:outputLabel style="font-family:Bahnschrift; font-size:20px; color:white; background-color:#45056F;" id="Moda" value="Moda #{calculadoraBean.mode}"></p:outputLabel>
+			</center></p>
+			
+		</center></h:form>
  </h:body>
 </html>
